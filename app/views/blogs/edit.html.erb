@@ -1,0 +1,10 @@
+<h1>Editing post</h1>
+<% form_for :post , :url => blog_path(@post) , :html => {:method => :put} do |f| -%>
+    <%= f.error_messages %>
+    <div><%= f.text_field :subject %>
+    <div><%= f.text_area :content %></div>
+    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end -%>
+
+<%= link_to 'Show', blog_path(blog) %> |
+<%= link_to 'Back', blogss_path %>

@@ -1,0 +1,18 @@
+<h1>My Blog</h1>
+<h2><%= link_to 'New post', new_blog_path %></h2>
+<table>
+  <tr>
+  </tr>
+
+<% for post in @posts %>
+  <tr>
+    <td><%= post.subject %> </td>
+    <td><%= link_to 'Show', blog_path(post) %></td>
+    <td><%= link_to 'Edit', edit_blog_path(post) %></td>
+    <td><%= link_to 'Destroy',  blog_path(post), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
